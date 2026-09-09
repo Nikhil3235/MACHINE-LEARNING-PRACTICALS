@@ -1,4 +1,4 @@
-# ML PRACTICALS
+#      **** ML PRACTICALS ****
 
 # PRACTICAL 1 
 
@@ -35,6 +35,9 @@ The project also visualizes the **Decision Boundary** of the Logistic Regression
 ## Objective
 
 The main objective of this project is to understand and implement **Logistic Regression for binary classification**, analyze its predictions, and evaluate its performance using different machine learning evaluation techniques.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
