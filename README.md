@@ -1,40 +1,129 @@
 #      **** ML PRACTICALS ****
 
-# PRACTICAL 1 
+# ML Practical 1 – Logistic Regression
 
-# Logistic Regression – Advertisement Click Prediction
+---
 
-## This project implements a **Logistic Regression machine learning model** to predict whether a user will click on an advertisement based on their online activity. The model uses two important features: **Daily Time Spent on Site** and **Daily Internet Usage** to perform binary classification.
+## 📌 Overview
 
-## The project demonstrates a complete machine learning workflow, starting from data loading and Exploratory Data Analysis (EDA) to model training, prediction, evaluation, and visualization.
+This practical demonstrates the implementation of **Logistic Regression** for **binary classification** using Python and Scikit-Learn.
 
-# Project Workflow
+The model predicts whether a user will **click on an advertisement** based on their online activity, using **Daily Time Spent on Site** and **Daily Internet Usage** as input features.
 
-## The dataset is first loaded using **Pandas** from the `advertising.csv` file. Basic information about the dataset is explored, including its shape, column names, data types, missing values, statistical summary, and target class distribution.
+---
 
-## Exploratory Data Analysis is performed using **Matplotlib** and **Seaborn**. Visualizations such as the target distribution and correlation heatmap are used to understand the dataset and relationships between numerical features.
+## 🎯 Objective
 
-## For model building, **Daily Time Spent on Site** and **Daily Internet Usage** are selected as input features, while **Clicked on Ad** is used as the target variable. The data is divided into training and testing sets using `train_test_split`. **StandardScaler** is then applied to scale the input features.
+The main objective of this practical is to understand and implement **Logistic Regression for binary classification**, make predictions, and evaluate the model using different classification evaluation techniques.
 
-## A **Logistic Regression** model from Scikit-learn is trained using the scaled training data. The trained model is used to predict both the class labels and probability of an advertisement click.
+---
 
-## The model performance is evaluated using several important classification metrics, including **Accuracy, Confusion Matrix, Classification Report, ROC Curve, and AUC Score**. These evaluation techniques help measure how effectively the model distinguishes between users who click and do not click on advertisements.
+## 🔄 Project Workflow
 
-## The project also visualizes the **Decision Boundary** of the Logistic Regression model to show how the two selected features separate the classes. Additionally, the **Sigmoid Function** is visualized to demonstrate how Logistic Regression converts the linear predictor into a probability between 0 and 1.
+The practical follows a complete machine learning workflow:
 
-## Technologies Used
+### 1. Data Loading
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* SciPy
+The dataset is loaded using **Pandas** from the `advertising.csv` file.
 
-## Objective
+Basic information about the dataset is explored, including:
 
-## The main objective of this project is to understand and implement **Logistic Regression for binary classification**, analyze its predictions, and evaluate its performance using different machine learning evaluation techniques.
+* Dataset shape
+* Column names
+* Data types
+* Missing values
+* Statistical summary
+* Target class distribution
+
+### 2. Exploratory Data Analysis
+
+**Matplotlib** and **Seaborn** are used for Exploratory Data Analysis (EDA).
+
+The practical includes visualizations such as:
+
+* Target class distribution
+* Correlation heatmap
+* Relationships between numerical features
+
+### 3. Feature Selection
+
+The following features are selected for model training:
+
+**Input Features:**
+
+* Daily Time Spent on Site
+* Daily Internet Usage
+
+**Target Variable:**
+
+* Clicked on Ad
+
+The dataset is divided into training and testing sets using `train_test_split`.
+
+**StandardScaler** is applied to scale the input features.
+
+### 4. Model Training
+
+A **Logistic Regression** model from Scikit-Learn is trained using the scaled training data.
+
+The trained model is used to generate:
+
+* Predicted class labels
+* Probability of advertisement clicks
+
+### 5. Model Evaluation
+
+The model is evaluated using the following classification metrics:
+
+* **Accuracy**
+* **Confusion Matrix**
+* **Classification Report**
+* **ROC Curve**
+* **AUC Score**
+
+These metrics help measure how effectively the model distinguishes between users who click and do not click on advertisements.
+
+### 6. Visualization
+
+The practical also includes visualization of:
+
+* **Decision Boundary** – Shows how the selected features separate the two classes.
+* **Sigmoid Function** – Demonstrates how Logistic Regression converts the linear output into a probability between 0 and 1.
+
+---
+
+## 🛠️ Technologies Used
+
+* **Python**
+* **Pandas**
+* **NumPy**
+* **Matplotlib**
+* **Seaborn**
+* **Scikit-Learn**
+* **SciPy**
+
+---
+
+## 📚 Key Concepts
+
+* Logistic Regression
+* Binary Classification
+* Exploratory Data Analysis
+* Feature Scaling
+* Train-Test Split
+* Confusion Matrix
+* Classification Report
+* ROC Curve
+* AUC Score
+* Decision Boundary
+* Sigmoid Function
+
+---
+
+## ✅ Conclusion
+
+This practical provides an understanding of **Logistic Regression for binary classification**, including data analysis, feature preprocessing, model training, prediction, visualization, and performance evaluation using standard classification metrics.
+
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
