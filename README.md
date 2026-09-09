@@ -8,7 +8,7 @@
 
 ## The project demonstrates a complete machine learning workflow, starting from data loading and Exploratory Data Analysis (EDA) to model training, prediction, evaluation, and visualization.
 
-## Project Workflow
+# Project Workflow
 
 ## The dataset is first loaded using **Pandas** from the `advertising.csv` file. Basic information about the dataset is explored, including its shape, column names, data types, missing values, statistical summary, and target class distribution.
 
