@@ -45,33 +45,39 @@
 
 # ML Practical 2 – Linear Regression
 
-## Overview
+---
 
-This practical focuses on the implementation of **Simple Linear Regression** and **Multiple Linear Regression** using Python, NumPy, and Scikit-Learn.
+## 📌 Overview
 
-The practical demonstrates the complete workflow of a regression problem, starting from data preparation and model training to prediction, visualization, residual analysis, and performance evaluation.
+This practical focuses on the implementation of **Simple Linear Regression** and **Multiple Linear Regression** using **Python, NumPy, and Scikit-Learn**.
 
-## Objectives
+It covers the complete regression workflow, including **data preparation, model training, prediction, visualization, residual analysis, and model evaluation**.
 
-* Implement Simple Linear Regression using NumPy.
+---
+
+## 🎯 Objectives
+
+* Implement **Simple Linear Regression** using NumPy.
 * Implement Linear Regression using Scikit-Learn.
-* Implement Multiple Linear Regression.
+* Implement **Multiple Linear Regression**.
 * Understand the relationship between independent and dependent variables.
 * Visualize regression results using plots.
 * Analyze prediction errors using residual plots.
-* Evaluate model performance using RMSE and R² Score.
+* Evaluate model performance using **RMSE and R² Score**.
 
-## Concepts Covered
+---
+
+## 📚 Concepts Covered
 
 ### 1. Simple Linear Regression
 
-Simple Linear Regression uses a single independent variable to predict a continuous dependent variable.
+Simple Linear Regression uses a **single independent variable** to predict a continuous dependent variable.
 
-The general equation is:
+**Equation:**
 
 `y = b₀ + b₁x`
 
-Where:
+**Where:**
 
 * `y` → Predicted output
 * `x` → Input feature
@@ -80,18 +86,20 @@ Where:
 
 ### 2. Multiple Linear Regression
 
-Multiple Linear Regression uses multiple independent variables to predict a continuous target variable.
+Multiple Linear Regression uses **multiple independent variables** to predict a continuous target variable.
 
-The general equation is:
+**Equation:**
 
 `y = b₀ + b₁x₁ + b₂x₂ + ... + bₙxₙ`
 
-## Implementation
+---
+
+## ⚙️ Implementation
 
 The practical includes:
 
 * Data loading and preprocessing
-* Exploratory data analysis
+* Exploratory Data Analysis (EDA)
 * Feature and target selection
 * Train-test splitting
 * Simple Linear Regression using NumPy
@@ -102,36 +110,46 @@ The practical includes:
 * Residual plot analysis
 * Model performance evaluation
 
-## Model Evaluation
+---
+
+## 📊 Model Evaluation
 
 ### RMSE – Root Mean Squared Error
 
 RMSE measures the average magnitude of prediction errors.
 
-A lower RMSE value indicates that the predicted values are closer to the actual values.
+**Lower RMSE indicates better prediction performance.**
 
 ### R² Score – Coefficient of Determination
 
 R² Score indicates how well the regression model explains the variation in the target variable.
 
-A value closer to **1** generally indicates a better model fit.
+**A value closer to 1 generally indicates a better model fit.**
 
-## Residual Analysis
+---
+
+## 📈 Residual Analysis
 
 Residuals represent the difference between actual and predicted values.
 
-`Residual = Actual Value − Predicted Value`
+**Residual = Actual Value − Predicted Value**
 
-A residual plot helps determine whether the errors are randomly distributed around zero and can be used to identify patterns in model errors.
+A residual plot helps analyze whether the prediction errors are randomly distributed around zero and helps identify patterns in model errors.
 
-## Libraries Used
+---
 
-* **NumPy** – Numerical computations
-* **Pandas** – Data manipulation and analysis
-* **Matplotlib** – Data visualization
-* **Scikit-Learn** – Machine learning model implementation
+## 🛠️ Libraries Used
 
-## Project Structure
+| Library          | Purpose                               |
+| ---------------- | ------------------------------------- |
+| **NumPy**        | Numerical computations                |
+| **Pandas**       | Data manipulation and analysis        |
+| **Matplotlib**   | Data visualization                    |
+| **Scikit-Learn** | Machine learning model implementation |
+
+---
+
+## 📂 Project Structure
 
 ```text
 ML-Practical-2-Linear-Regression/
@@ -139,27 +157,37 @@ ML-Practical-2-Linear-Regression/
 ├── Simple_Linear_Regression.ipynb
 ├── Multiple_Linear_Regression.ipynb
 ├── README.md
+│
 └── dataset/
     └── dataset.csv
 ```
 
-## Requirements
+---
+
+## 💻 Requirements
+
+Install the required Python libraries using:
 
 ```bash
 pip install numpy pandas matplotlib scikit-learn
 ```
 
-## Execution
+---
+
+## ▶️ Execution
 
 1. Open the required Jupyter Notebook.
 2. Load the dataset.
 3. Perform data preprocessing and feature selection.
-4. Train the regression model.
-5. Generate predictions.
-6. Visualize the regression results and residuals.
-7. Evaluate the model using RMSE and R² Score.
+4. Split the dataset into training and testing sets.
+5. Train the regression model.
+6. Generate predictions.
+7. Visualize the regression results and residuals.
+8. Evaluate the model using **RMSE and R² Score**.
 
-## Expected Outcomes
+---
+
+## ✅ Expected Outcomes
 
 After completing this practical, the implementation demonstrates:
 
@@ -170,6 +198,8 @@ After completing this practical, the implementation demonstrates:
 * RMSE-based evaluation
 * R² Score-based evaluation
 
-## Conclusion
+---
 
-This practical provides an understanding of how Linear Regression can be implemented using both **NumPy** and **Scikit-Learn**, along with techniques for visualizing and evaluating regression models.
+## 📝 Conclusion
+
+This practical provides an understanding of **Linear Regression** and its implementation using **NumPy and Scikit-Learn**, along with techniques for **visualizing, analyzing, and evaluating regression models**.
