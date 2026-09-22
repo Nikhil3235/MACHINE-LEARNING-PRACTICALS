@@ -289,3 +289,251 @@ The practical also includes visualization of:
 
 This practical provides an understanding of **Logistic Regression for binary classification**, including data analysis, feature preprocessing, model training, prediction, visualization, and performance evaluation using standard classification metrics.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ML Practical 3 – Decision Tree Classification
+
+---
+
+## 📌 Overview
+
+This practical focuses on the implementation of a **Decision Tree Classification** model using the **Iris Dataset** with **Python and Scikit-Learn**.
+
+It covers the complete classification workflow, including **data loading, exploratory data analysis, train-test splitting, model training, prediction, classification metrics, and 5-Fold Cross Validation**.
+
+---
+
+## 🎯 Objectives
+
+* Implement a **Decision Tree Classifier** using Scikit-Learn.
+* Work with the **Iris flower dataset**.
+* Perform basic **Exploratory Data Analysis (EDA)**.
+* Split the dataset into **training and testing sets**.
+* Train and predict using a Decision Tree model.
+* Evaluate the model using:
+
+  * Accuracy
+  * Precision
+  * Recall
+  * F1 Score
+* Apply **5-Fold Cross Validation**.
+* Compare model performance using different evaluation metrics.
+
+---
+
+## 📚 Dataset Used
+
+The practical uses the **Iris Dataset** available in Scikit-Learn.
+
+The dataset contains measurements of iris flowers and three target species:
+
+* **Setosa**
+* **Versicolor**
+* **Virginica**
+
+### Features
+
+* Sepal Length
+* Sepal Width
+* Petal Length
+* Petal Width
+
+### Target Variable
+
+* Species
+
+---
+
+## 🔄 Project Workflow
+
+The practical follows a complete machine learning classification workflow.
+
+### 1. Data Loading
+
+The Iris dataset is loaded using **Scikit-Learn** and converted into a Pandas DataFrame.
+
+Basic dataset information is explored, including:
+
+* Dataset shape
+* Feature names
+* Data types
+* First few records
+* Target class distribution
+
+---
+
+### 2. Exploratory Data Analysis
+
+Basic EDA is performed to understand the dataset.
+
+The practical includes:
+
+* Target class distribution
+* Scatter plot
+* Box plot
+* Feature analysis
+
+A scatter plot is used to visualize the relationship between **Petal Length** and **Petal Width**.
+
+---
+
+### 3. Data Splitting
+
+The dataset is divided into:
+
+**Independent Variables:**
+
+* Sepal Length
+* Sepal Width
+* Petal Length
+* Petal Width
+
+**Dependent Variable:**
+
+* Species
+
+The dataset is split into training and testing data using `train_test_split`.
+
+---
+
+### 4. Model Building
+
+A **Decision Tree Classifier** is created using Scikit-Learn.
+
+The model is configured with:
+
+```python
+DecisionTreeClassifier(max_depth=3, random_state=42)
+```
+
+The model is trained using the training dataset and then used to predict the classes of the test dataset.
+
+---
+
+### 5. Classification Metrics
+
+The performance of the Decision Tree model is evaluated using:
+
+* **Accuracy**
+* **Precision**
+* **Recall**
+* **F1 Score**
+
+These metrics help evaluate the classification performance of the model.
+
+---
+
+## 🔄 5-Fold Cross Validation
+
+The practical also implements **5-Fold Cross Validation** using `KFold`.
+
+In 5-Fold Cross Validation:
+
+* The dataset is divided into 5 folds.
+* 4 folds are used for training.
+* 1 fold is used for testing.
+* The process is repeated 5 times.
+* The average performance is calculated.
+
+The following metrics are evaluated:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+
+---
+
+## 📊 Model Evaluation
+
+### Accuracy
+
+Accuracy represents the proportion of correctly classified samples out of all samples.
+
+### Precision
+
+Precision measures how many of the samples predicted as a particular class are actually correct.
+
+### Recall
+
+Recall measures how many of the actual samples of a class are correctly identified.
+
+### F1 Score
+
+F1 Score combines **Precision and Recall** into a single metric.
+
+---
+
+## 🛠️ Libraries Used
+
+| **Library**      | **Purpose**                           |
+| ---------------- | ------------------------------------- |
+| **NumPy**        | Numerical computations                |
+| **Pandas**       | Data manipulation and analysis        |
+| **Matplotlib**   | Data visualization                    |
+| **Scikit-Learn** | Machine learning and model evaluation |
+
+---
+
+## 📂 Project Structure
+
+```text
+ML-Practical-3-Decision-Tree-Classification/
+│
+├── Decision_Tree_Classification.ipynb
+├── README.md
+│
+```
+
+---
+
+## 💻 Requirements
+
+Install the required Python libraries using:
+
+```bash
+pip install numpy pandas matplotlib scikit-learn
+```
+
+---
+
+## ▶️ Execution
+
+1. Open the Jupyter Notebook.
+2. Import the required libraries.
+3. Load the Iris dataset.
+4. Perform basic Exploratory Data Analysis.
+5. Select features and target variable.
+6. Split the dataset into training and testing sets.
+7. Create and train the Decision Tree Classifier.
+8. Generate predictions on the test dataset.
+9. Calculate Accuracy, Precision, Recall, and F1 Score.
+10. Apply 5-Fold Cross Validation.
+11. Calculate the average cross-validation performance.
+
+---
+
+## 📈 Expected Outcomes
+
+After completing this practical, the implementation demonstrates:
+
+* Iris dataset analysis
+* Exploratory Data Analysis
+* Decision Tree Classification
+* Train-Test Split
+* Model Prediction
+* Accuracy evaluation
+* Precision evaluation
+* Recall evaluation
+* F1 Score evaluation
+* 5-Fold Cross Validation
+
+---
+
+## 📝 Conclusion
+
+This practical provides an understanding of **Decision Tree Classification** using the Iris Dataset.
+
+It demonstrates the complete classification workflow, including **data analysis, train-test splitting, model training, prediction, classification metrics, and 5-Fold Cross Validation** using Python and Scikit-Learn.
+
+
