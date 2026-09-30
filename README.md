@@ -537,3 +537,297 @@ This practical provides an understanding of **Decision Tree Classification** usi
 It demonstrates the complete classification workflow, including **data analysis, train-test splitting, model training, prediction, classification metrics, and 5-Fold Cross Validation** using Python and Scikit-Learn.
 
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# *** ML PRACTICALS ***
+
+# PRACTICAL 4
+
+# ML Practical 4 – K-Nearest Neighbors (KNN) Classification
+
+---
+
+## 📌 Overview
+
+This practical focuses on the implementation of **K-Nearest Neighbors (KNN) Classification** using **Python and Scikit-Learn**.
+
+It covers the complete classification workflow, including **data loading, exploratory data analysis, feature selection, train-test splitting, feature scaling, model training, prediction, accuracy evaluation, visualization, and K value tuning**.
+
+The practical uses the **Social Network Ads dataset** to predict whether a user will purchase a product based on their **Age** and **Estimated Salary**.
+
+---
+
+## 🎯 Objectives
+
+* Implement a **K-Nearest Neighbors (KNN) Classifier** using Scikit-Learn.
+* Work with the **Social Network Ads dataset**.
+* Perform basic **Exploratory Data Analysis (EDA)**.
+* Select appropriate features and target variables.
+* Split the dataset into **training and testing sets**.
+* Apply **StandardScaler** for feature scaling.
+* Train and predict using a **KNN Classification** model.
+* Evaluate model performance using **Accuracy**.
+* Visualize the KNN classification results.
+* Tune the value of **K** to identify the best model performance.
+
+---
+
+## 📚 Dataset Used
+
+The practical uses the **Social Network Ads Dataset**.
+
+The dataset contains information about users and their purchasing behavior.
+
+### Features
+
+* Age
+* Estimated Salary
+
+### Target Variable
+
+* Purchased
+
+The `Purchased` variable represents whether the user purchased the product or not.
+
+---
+
+## 🔄 Project Workflow
+
+The practical follows a complete machine learning classification workflow.
+
+### 1. Data Loading
+
+The dataset is loaded using **Pandas** from the `Social_Network_Ads.csv` file.
+
+Basic information about the dataset is explored, including:
+
+* Dataset shape
+* First few records
+* Target class distribution
+* Feature values
+
+---
+
+### 2. Exploratory Data Analysis
+
+Basic EDA is performed to understand the relationship between the input features and target variable.
+
+A **scatter plot** is used to visualize the relationship between:
+
+* Age
+* Estimated Salary
+
+The target variable `Purchased` is used to distinguish the different classes in the visualization.
+
+---
+
+### 3. Feature Selection
+
+The following features are selected for model training:
+
+**Input Features:**
+
+* Age
+* Estimated Salary
+
+**Target Variable:**
+
+* Purchased
+
+---
+
+### 4. Data Splitting
+
+The dataset is divided into training and testing data using `train_test_split`.
+
+The test size is set to **20%** of the dataset.
+
+The training data is used to train the KNN model, while the testing data is used to evaluate the model.
+
+---
+
+### 5. Feature Scaling
+
+Since KNN is a distance-based algorithm, feature scaling is applied using **StandardScaler**.
+
+The features are standardized so that they have comparable scales.
+
+```python
+scaler = StandardScaler()
+
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+```
+
+---
+
+### 6. Model Building
+
+A **KNeighborsClassifier** is created using Scikit-Learn.
+
+The initial model uses:
+
+```python
+KNeighborsClassifier(n_neighbors=5)
+```
+
+The model is trained using the scaled training data and then used to predict the classes of the test dataset.
+
+---
+
+### 7. Model Prediction
+
+The trained KNN model is used to generate predictions for the test dataset.
+
+```python
+y_pred = knn.predict(X_test)
+```
+
+The predicted values are then compared with the actual target values.
+
+---
+
+## 📊 Model Evaluation
+
+The performance of the KNN model is evaluated using **Accuracy Score**.
+
+### Accuracy
+
+Accuracy represents the proportion of correctly classified samples out of all test samples.
+
+```python
+accuracy = accuracy_score(y_test, y_pred)
+```
+
+The initial KNN model with `K = 5` produces an accuracy of approximately:
+
+```text
+Accuracy: 0.7375
+```
+
+---
+
+## 📈 K Value Tuning
+
+The value of **K** is an important parameter in KNN classification.
+
+Different K values from **1 to 15** are tested to compare their classification accuracy.
+
+The accuracy values are stored and visualized using a line plot.
+
+The practical identifies the K value that produces the highest accuracy among the tested values.
+
+The observed results include:
+
+| K Value | Accuracy |
+| ------- | -------- |
+| 1       | 0.725    |
+| 2       | 0.713    |
+| 3       | 0.775    |
+| 4       | 0.762    |
+| 5       | 0.738    |
+| 6       | 0.750    |
+| 7       | 0.750    |
+| 8       | 0.762    |
+| 9       | 0.738    |
+| 10      | 0.750    |
+| 11      | 0.775    |
+| 12      | 0.800    |
+| 13      | 0.775    |
+| 14      | 0.800    |
+| 15      | 0.775    |
+
+The maximum observed accuracy is:
+
+```text
+Best Accuracy: 0.8
+```
+
+The first K value achieving this maximum in the practical is:
+
+```text
+Best K: 12
+```
+
+---
+
+## 🛠️ Libraries Used
+
+| **Library**      | **Purpose**                           |
+| ---------------- | ------------------------------------- |
+| **Pandas**       | Data manipulation and analysis        |
+| **Matplotlib**   | Data visualization                    |
+| **Scikit-Learn** | Machine learning and model evaluation |
+
+---
+
+## 📂 Project Structure
+
+```text
+ML-Practical-4-KNN-Classification/
+│
+├── KNN_Classification.ipynb
+├── README.md
+│
+└── dataset/
+    └── Social_Network_Ads.csv
+```
+
+---
+
+## 💻 Requirements
+
+Install the required Python libraries using:
+
+```text
+pip install pandas matplotlib scikit-learn
+```
+
+---
+
+## ▶️ Execution
+
+1. Open the Jupyter Notebook.
+2. Import the required libraries.
+3. Load the Social Network Ads dataset.
+4. Perform basic Exploratory Data Analysis.
+5. Select features and target variable.
+6. Split the dataset into training and testing sets.
+7. Apply StandardScaler to scale the input features.
+8. Create and train the KNN Classifier.
+9. Generate predictions on the test dataset.
+10. Calculate the model accuracy.
+11. Visualize the KNN classification results.
+12. Test different K values from 1 to 15.
+13. Plot K values against their corresponding accuracy.
+14. Identify the K value with the maximum observed accuracy.
+
+---
+
+## 📈 Expected Outcomes
+
+After completing this practical, the implementation demonstrates:
+
+* Social Network Ads dataset analysis
+* Exploratory Data Analysis
+* Feature Selection
+* Train-Test Split
+* Feature Scaling
+* K-Nearest Neighbors Classification
+* Model Prediction
+* Accuracy evaluation
+* K Value tuning
+* K vs Accuracy visualization
+* Selection of the best observed K value
+
+---
+
+## 📝 Conclusion
+
+This practical provides an understanding of **K-Nearest Neighbors (KNN) Classification** using the Social Network Ads Dataset.
+
+It demonstrates the complete classification workflow, including **data analysis, feature selection, train-test splitting, feature scaling, model training, prediction, accuracy evaluation, visualization, and K value tuning** using Python and Scikit-Learn.
+
+
+
