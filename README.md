@@ -829,5 +829,368 @@ This practical provides an understanding of **K-Nearest Neighbors (KNN) Classifi
 
 It demonstrates the complete classification workflow, including **data analysis, feature selection, train-test splitting, feature scaling, model training, prediction, accuracy evaluation, visualization, and K value tuning** using Python and Scikit-Learn.
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+**** ML PRACTICALS ****
+
+PRACTICAL 5
+
+ML Practical 5 – Support Vector Machine (SVM) Classification
+
+📌 Overview
+
+This practical focuses on the implementation of Support Vector Machine (SVM) Classification using Python and Scikit-Learn.
+
+It covers the complete SVM workflow, including data loading, exploratory data analysis, feature and target splitting, train-test splitting, model training using Linear, RBF, and Polynomial kernels, model evaluation, and hyperparameter tuning using Grid Search.
+
+The practical uses the Non-linear SVM Dataset to train and compare different SVM models.
+
+🎯 Objectives
+
+Implement a Support Vector Machine (SVM) classifier using Scikit-Learn.
+
+Load and explore the Non-linear SVM Dataset.
+
+Perform basic Exploratory Data Analysis (EDA).
+
+Separate features and target variables.
+
+Split the dataset into training and testing sets.
+
+Train an SVM model using the Linear Kernel.
+
+Train an SVM model using the RBF Kernel.
+
+Train an SVM model using the Polynomial Kernel.
+
+Evaluate model performance using Accuracy.
+
+Tune C and gamma hyperparameters using Grid Search.
+
+Evaluate the best tuned SVM model using Accuracy and Classification Report.
+
+📚 Dataset Used
+
+The practical uses the Non-linear SVM Dataset stored in:
+
+Non_linear_SVM_Dataset.csv
+
+Features
+
+The dataset contains two input features:
+
+X1
+
+X2
+
+Target Variable
+
+Y
+
+The Y variable represents the output/class used for SVM classification.
+
+🔄 Project Workflow
+
+The practical follows a complete machine learning classification workflow.
+
+1. Import Libraries
+
+The following Python libraries are used:
+
+NumPy
+
+Pandas
+
+Matplotlib
+
+Seaborn
+
+Scikit-Learn
+
+2. Load and Preview Dataset
+
+The dataset is loaded using Pandas from the Non_linear_SVM_Dataset.csv file.
+
+The dataset structure is checked using:
+
+df.info()
+
+This helps understand the columns and data types present in the dataset.
+
+3. Feature and Target Splitting
+
+The dataset is divided into input features and target variable.
+
+Input Features:
+
+X1
+
+X2
+
+Target Variable:
+
+Y
+
+The target column Y is separated from the input features.
+
+4. Exploratory Data Analysis & Visualization
+
+Basic visualization is performed to understand the relationship between the features and target.
+
+The practical includes:
+
+2D Scatter Plot
+
+3D Scatter Plot
+
+The scatter plots visualize the relationship between X1, X2, and Y.
+
+5. Train-Test Split
+
+The dataset is divided into training and testing data using train_test_split.
+
+The test size is set to 30% of the dataset.
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, Y, test_size=0.3, random_state=42
+)
+
+The training data is used to train the SVM models, while the testing data is used to evaluate their performance.
+
+🤖 SVM Model Training
+
+6. Linear Kernel
+
+A Support Vector Machine model is created using the Linear Kernel.
+
+linear_svm = SVC(kernel='linear')
+
+The model is trained using the training dataset and predictions are generated for the test dataset.
+
+The model performance is evaluated using Accuracy Score.
+
+7. RBF Kernel
+
+An SVM model is created using the RBF (Radial Basis Function) Kernel.
+
+rbf_svm = SVC(kernel='rbf', C=10, gamma='scale')
+
+The RBF kernel is used to handle non-linear relationships in the dataset.
+
+The trained model is used to make predictions and calculate accuracy.
+
+8. Polynomial Kernel
+
+An SVM model is created using the Polynomial Kernel.
+
+poly_svm = SVC(kernel='poly', C=10, degree=2)
+
+The Polynomial Kernel is used to model non-linear relationships using polynomial transformations.
+
+The model is trained and evaluated using the test dataset.
+
+📊 Model Evaluation
+
+The SVM models are evaluated using Accuracy Score.
+
+Accuracy
+
+Accuracy represents the proportion of correctly classified samples out of all test samples.
+
+accuracy_score(y_test, y_pred)
+
+The accuracy is calculated separately for:
+
+Linear SVM
+
+RBF SVM
+
+Polynomial SVM
+
+This allows the performance of different kernels to be compared.
+
+🔧 Hyperparameter Tuning via Grid Search
+
+The practical uses GridSearchCV to find suitable values of the SVM hyperparameters C and gamma for the RBF kernel.
+
+The parameters tested are:
+
+params = {
+    'C': [0.1, 1, 10, 100],
+    'gamma': ['scale', 0.01, 0.1, 1]
+}
+
+The Grid Search uses:
+
+RBF Kernel
+
+5-Fold Cross Validation
+
+Accuracy as the scoring metric
+
+The best parameter combination is obtained using:
+
+grid.best_params_
+
+📈 Evaluate Best Tuned Model
+
+After Grid Search, the best SVM model is selected using:
+
+best_model = grid.best_estimator_
+
+The best model is then used to make predictions on the test dataset.
+
+The final tuned model is evaluated using:
+
+Accuracy
+
+Classification Report
+
+The classification report provides detailed classification performance for the model.
+
+📚 Key Concepts
+
+Support Vector Machine (SVM)
+
+Classification
+
+Linear Kernel
+
+RBF Kernel
+
+Polynomial Kernel
+
+C Hyperparameter
+
+Gamma Hyperparameter
+
+Grid Search
+
+GridSearchCV
+
+Train-Test Split
+
+5-Fold Cross Validation
+
+Accuracy Score
+
+Classification Report
+
+Exploratory Data Analysis
+
+🛠️ Libraries Used
+
+Library
+
+Purpose
+
+NumPy
+
+Numerical computations
+
+Pandas
+
+Data loading and manipulation
+
+Matplotlib
+
+Data visualization
+
+Seaborn
+
+Data visualization
+
+Scikit-Learn
+
+SVM model, model evaluation, train-test split, and hyperparameter tuning
+
+📂 Project Structure
+
+ML-Practical-5-SVM-Classification/
+│
+├── ML_PRACTICAL_5.ipynb
+├── README.md
+│
+└── dataset/
+    └── Non_linear_SVM_Dataset.csv
+
+💻 Requirements
+
+Install the required Python libraries using:
+
+pip install numpy pandas matplotlib seaborn scikit-learn
+
+▶️ Execution
+
+Open the Jupyter Notebook.
+
+Import the required libraries.
+
+Load the Non_linear_SVM_Dataset.csv dataset.
+
+Preview and inspect the dataset.
+
+Separate features and target variable.
+
+Perform Exploratory Data Analysis.
+
+Visualize the dataset using 2D and 3D scatter plots.
+
+Split the dataset into training and testing sets.
+
+Create and train the Linear SVM model.
+
+Calculate Linear SVM accuracy.
+
+Create and train the RBF SVM model.
+
+Calculate RBF SVM accuracy.
+
+Create and train the Polynomial SVM model.
+
+Calculate Polynomial SVM accuracy.
+
+Apply Grid Search for tuning C and gamma.
+
+Find the best hyperparameters.
+
+Evaluate the best tuned RBF SVM model.
+
+Display the Classification Report.
+
+📈 Expected Outcomes
+
+After completing this practical, the implementation demonstrates:
+
+Non-linear SVM dataset analysis
+
+Exploratory Data Analysis
+
+Feature and target selection
+
+Train-Test Split
+
+Linear Kernel SVM
+
+RBF Kernel SVM
+
+Polynomial Kernel SVM
+
+Accuracy evaluation
+
+Hyperparameter tuning
+
+Grid Search
+
+5-Fold Cross Validation
+
+Best parameter selection
+
+Classification Report
+
+📝 Conclusion
+
+This practical provides an understanding of Support Vector Machine (SVM) Classification using the Non-linear SVM Dataset.
+
+It demonstrates the complete classification workflow, including data analysis, feature selection, train-test splitting, Linear, RBF and Polynomial kernel models, accuracy evaluation, hyperparameter tuning using Grid Search, and evaluation of the best tuned model using Python and Scikit-Learn.
 
